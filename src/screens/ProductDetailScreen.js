@@ -1,4 +1,5 @@
-import { FlatList, Image, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { FlatList, Image, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import ActionButton from "../components/ActionButton";
 import products from "../data/products";
 
 const ProductDetailsScreen = () => {
@@ -40,9 +41,7 @@ const ProductDetailsScreen = () => {
       </ScrollView>
 
       {/* Add to cart button */}
-      <Pressable onPress={addToCart} style={styles.button}>
-        <Text style={styles.buttonText}>Add to cart</Text>
-      </Pressable>
+      <ActionButton title="Add to cart" onPress={addToCart} />
 
       {/* Navigation icon */}
     </View>
@@ -66,21 +65,6 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     fontWeight: '300',
   },
-  button: {
-    position: 'absolute',
-    backgroundColor: 'black',
-    bottom: 30,
-    width: '90%',
-    alignSelf: 'center',
-    padding: 20,
-    borderRadius: 100,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: 'white',
-    fontWeight: '500',
-    fontSize: 16
-  }
 });
 
 export default ProductDetailsScreen;
