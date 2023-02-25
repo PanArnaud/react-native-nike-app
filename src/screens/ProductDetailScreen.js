@@ -1,9 +1,9 @@
 import { FlatList, Image, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { useSelector } from "react-redux";
 import ActionButton from "../components/ActionButton";
-import products from "../data/products";
 
 const ProductDetailsScreen = () => {
-  const product = products[0];
+  const product = useSelector(state => state.products.selectedProduct);
 
   const { width } = useWindowDimensions();
 
