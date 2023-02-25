@@ -28,7 +28,7 @@ const ProductDetailsScreen = () => {
           pagingEnabled
         />
 
-        <View style={{ padding: 20 }}>
+        <View style={{ padding: 20, marginBottom: 80 }}>
           {/* Title */}
           <Text style={styles.title}>{product.name}</Text>
 
